@@ -1,0 +1,506 @@
+<div class="nh-unique-block" data-block-id="block-1">
+  <style>
+    .nh-unique-block .nh-container {
+      max-width: 1140px;
+      font-family: "Poppins", sans-serif;
+      background-color: transparent;
+      margin: 0 auto; /* ✅ This centers the container */
+      padding: 20px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .nh-unique-block .nh-product-options {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 60px;
+    }
+
+    .nh-unique-block .nh-product-card {
+      position: relative;
+      border-radius: 0;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      flex: 1 1 280px; /* responsive sizing */
+      max-width: 340px; /* prevents stretching */
+      min-width: 260px; /* prevents squishing */
+      text-align: center;
+    }
+
+    .nh-unique-block .nh-featured {
+      background-color: #fdeaea; /* mixed berry pink */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s ease;
+    }
+
+    .nh-unique-block .nh-product-image {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .nh-unique-block .nh-product-image img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      border-radius: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    .nh-unique-block .nh-product-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #004175;
+    }
+
+    .nh-unique-block .nh-select-flavor {
+      color: #004175;
+      font-size: large;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: underline;
+    }
+
+    .nh-unique-block .nh-flavor-options {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      margin: 0 auto 20px;
+      width: fit-content;
+      gap: 2px;
+    }
+
+    .nh-unique-block .nh-flavor-options label {
+      font-size: 1.1rem; /* Make text bigger */
+      font-weight: bold; /* Make text bold */
+      color: #004175; /* Optional: matches your brand blue */
+      cursor: pointer; /* Adds a nice hover pointer */
+    }
+
+    .nh-unique-block .nh-radio {
+      accent-color: #004175;
+    }
+
+    .nh-unique-block .nh-price {
+      margin-top: 10px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #004175;
+    }
+
+    .nh-unique-block .nh-total {
+      margin-top: 5px; /* changed from -40px */
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #004175;
+    }
+
+    .nh-unique-block .nh-freebies {
+      font-weight: bold;
+      font-size: large;
+      line-height: 1.4;
+      color: #8d1001;
+    }
+
+    .nh-unique-block .nh-buy-button {
+      background: linear-gradient(to bottom, #f5c04f, #f2a20c, #e19009);
+      color: white;
+      padding: 18px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      border-radius: 10px;
+    }
+
+    .nh-unique-block .nh-buy-button:hover {
+      background-color: #c97f08;
+    }
+
+    .nh-unique-block .nh-divider {
+      border: none;
+      height: 2px;
+      background-color: #004175;
+      width: 80%;
+      margin: 10px auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      .nh-unique-block .nh-product-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .nh-unique-block .nh-product-card {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto 20px;
+        order: 0;
+      }
+
+      .nh-unique-block .nh-product-image {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .nh-unique-block .nh-product-image img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: opacity 0.5s ease;
+      }
+
+      .nh-unique-block .nh-badge {
+        top: -20px;
+        right: -20px;
+        transform: scale(0.85);
+      }
+
+      /* 👇 These only apply on mobile now */
+      .nh-product-card.card-6 {
+        order: 1;
+      }
+      .nh-product-card.card-3 {
+        order: 2;
+      }
+      .nh-product-card.card-1 {
+        order: 3;
+      }
+    }
+  </style>
+
+  <div class="nh-container">
+    <div class="nh-product-options">
+      <!-- 1 Jar -->
+      <div class="nh-product-card card-1">
+        <h2 class="nh-product-title">1 Jar</h2>
+        <div class="nh-product-image">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_MB_SP_1.png?v=1745509967"
+            data-flavor-mixed-berry="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_MB_SP_1.png?v=1745509967"
+            data-flavor-tangerine="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_T_SP_1.png?v=1745509967"
+            data-flavor-peach-mango="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_PM_SP_1.png?v=1745509967"
+            alt="1 Jar"
+          />
+        </div>
+        <p class="nh-select-flavor">Select Flavor:</p>
+        <div class="nh-flavor-options">
+          <label
+            ><input
+              type="radio"
+              class="nh-radio"
+              name="flavor-1"
+              value="Mixed Berry"
+              checked
+            />
+            Mixed Berry</label
+          >
+          <label
+            ><input
+              type="radio"
+              class="nh-radio"
+              name="flavor-1"
+              value="Tangerine"
+            />
+            Tangerine</label
+          >
+          <label
+            ><input
+              type="radio"
+              class="nh-radio"
+              name="flavor-1"
+              value="Peach Mango"
+            />
+            Peach Mango</label
+          >
+        </div>
+        <p class="nh-price">$43</p>
+        <p class="nh-total">
+          TOTAL $43
+          <span class="nh-original-price" style="text-decoration: line-through"
+            >$50</span
+          >
+        </p>
+        <hr class="nh-divider" />
+        <p class="nh-freebies">
+          + FREE SHIPPING<br />
+          + FREE FUNNEL<br />
+          <span style="visibility: hidden">+ FREE TUMBLER</span>
+        </p>
+        <button
+          class="nh-buy-button"
+          data-checkoutmixedberry="https://secure.nativepath.com/checkout-nativepath-hydrate-mixedberry-stick-packs-special-offer-1859-1?products=15085:1;15102:1"
+          data-checkouttangerine="https://secure.nativepath.com/checkout-nativepath-hydrate-tangerine-stick-packs-special-offer-1859-1?products=15087:1;15102:1"
+          data-checkoutpeachmango="https://secure.nativepath.com/checkout-nativepath-hydrate-peachmango-stick-packs-special-offer-1859-1?products=15086:1;15102:1"
+        >
+          BUY NOW 14% OFF
+        </button>
+      </div>
+
+      <!-- 6 Jars -->
+      <div class="nh-product-card nh-featured card-6">
+        <h2 class="nh-product-title">6 Jars</h2>
+        <div class="nh-product-image">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_MB_6_SP.png?v=1745509693"
+            data-flavor-mixed-berry="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_MB_6_SP.png?v=1745509693"
+            data-flavor-tangerine="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_T_6_SP.png?v=1745509693"
+            data-flavor-peach-mango="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_PM_6_SP.png?v=1745509693"
+            alt="6 Jars"
+          />
+        </div>
+        <p class="nh-select-flavor">Select Flavor:</p>
+        <div class="nh-flavor-options">
+          <label
+            ><input
+              type="radio"
+              class="nh-radio"
+              name="flavor-6"
+              value="Mixed Berry"
+              checked
+            />
+            Mixed Berry</label
+          >
+          <label
+            ><input
+              type="radio"
+              class="nh-radio"
+              name="flavor-6"
+              value="Tangerine"
+            />
+            Tangerine</label
+          >
+          <label
+            ><input
+              type="radio"
+              class="nh-radio"
+              name="flavor-6"
+              value="Peach Mango"
+            />
+            Peach Mango</label
+          >
+        </div>
+        <p class="nh-price">
+          $28
+          <span class="unit" style="font-size: 0.8rem; font-weight: normal"
+            >each</span
+          >
+        </p>
+        <p class="nh-total">
+          TOTAL $168
+          <span class="nh-original-price" style="text-decoration: line-through"
+            >$300</span
+          >
+        </p>
+        <hr class="nh-divider" />
+        <p class="nh-freebies">
+          + FREE SHIPPING<br />+ FREE TUMBLER<br />+ FREE FUNNEL
+        </p>
+        <button
+          class="nh-buy-button"
+          data-checkoutmixedberry="https://secure.nativepath.com/checkout-nativepath-hydrate-mixedberry-stick-packs-special-offer-1859-6?products=15091:1;15042:1;15102:1"
+          data-checkouttangerine="https://secure.nativepath.com/checkout-nativepath-hydrate-tangerine-stick-packs-special-offer-1859-6?products=15093:1;15042:1;15102:1"
+          data-checkoutpeachmango="https://secure.nativepath.com/checkout-nativepath-hydrate-peachmango-stick-packs-special-offer-1859-6?products=15092:1;15042:1;15102:1"
+        >
+          BUY NOW 44% OFF
+        </button>
+      </div>
+
+      <!-- 3 Jars -->
+      <div class="nh-product-card card-3">
+        <h2 class="nh-product-title">3 Jars</h2>
+        <div class="nh-product-image">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_MB_3_SP.png?v=1745509693"
+            data-flavor-mixed-berry="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_MB_3_SP.png?v=1745509693"
+            data-flavor-tangerine="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_T_3_SP.png?v=1745509693"
+            data-flavor-peach-mango="https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_PM_3_SP.png?v=1745509693"
+            alt="3 Jars"
+          />
+        </div>
+        <p class="nh-select-flavor">Select Flavor:</p>
+        <div class="nh-flavor-options">
+          <label
+            ><input
+              type="radio"
+              class="nh-radio"
+              name="flavor-3"
+              value="Mixed Berry"
+              checked
+            />
+            Mixed Berry</label
+          >
+          <label
+            ><input
+              type="radio"
+              class="nh-radio"
+              name="flavor-3"
+              value="Tangerine"
+            />
+            Tangerine</label
+          >
+          <label
+            ><input
+              type="radio"
+              class="nh-radio"
+              name="flavor-3"
+              value="Peach Mango"
+            />
+            Peach Mango</label
+          >
+        </div>
+        <p class="nh-price">
+          $33
+          <span class="unit" style="font-size: 0.8rem; font-weight: normal"
+            >each</span
+          >
+        </p>
+        <p class="nh-total">
+          TOTAL $99
+          <span class="nh-original-price" style="text-decoration: line-through"
+            >$150</span
+          >
+        </p>
+        <hr class="nh-divider" />
+        <p class="nh-freebies">
+          + FREE SHIPPING<br />+ FREE TUMBLER<br />+ FREE FUNNEL
+        </p>
+        <button
+          class="nh-buy-button"
+          data-checkoutmixedberry="https://secure.nativepath.com/checkout-nativepath-hydrate-mixedberry-stick-packs-special-offer-1859-3?products=15088:1;15042:1;15102:1"
+          data-checkouttangerine="https://secure.nativepath.com/checkout-nativepath-hydrate-tangerine-stick-packs-special-offer-1859-3?products=15090:1;15042:1;15102:1"
+          data-checkoutpeachmango="https://secure.nativepath.com/checkout-nativepath-hydrate-peachmango-stick-packs-special-offer-1859-3?products=15089:1;15042:1;15102:1"
+        >
+          BUY NOW 34% OFF
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+// Synchronize the image with the selected flavor on back navigation
+window.addEventListener("pageshow", () => {
+  document.querySelectorAll(".nh-unique-block").forEach((root) => {
+    root.querySelectorAll(".nh-radio").forEach((radio) => {
+      radio.checked = radio.value === "Mixed Berry";
+    });
+    updateFlavor("Mixed Berry", root);
+  });
+});
+
+
+document.querySelectorAll(".nh-unique-block").forEach((root, blockIndex) => {
+  if (root.dataset.nhInitialized) return;
+  root.dataset.nhInitialized = "true";
+
+  const cards = root.querySelectorAll(".nh-product-card");
+
+  cards.forEach((card, cardIndex) => {
+    const radios = card.querySelectorAll(".nh-radio");
+    const flavorName = `flavor-${blockIndex}-${cardIndex}`;
+    radios.forEach((radio) => {
+      radio.name = flavorName;
+    });
+
+    const button = card.querySelector(".nh-buy-button");
+    button.addEventListener("click", () => {
+      // Preserve state before navigating to checkout
+      window.history.replaceState(null, '', window.location.href);
+
+      const selectedFlavor = [...radios].find((r) => r.checked)?.value?.toLowerCase();
+      const datasetKey = "checkout" + selectedFlavor.replace(/\s+/g, "").replace(/-/g, "");
+      const checkoutUrl = button.dataset[datasetKey];
+      if (checkoutUrl) {
+        window.location.href = checkoutUrl;
+      } else {
+        alert("Checkout URL not found for this option.");
+      }
+    });
+  });
+
+  const flavorBackgrounds = {
+    "mixed-berry": "#fdeaea",
+    "tangerine": "#fef0c9",
+    "peach-mango": "#feedd1",
+  };
+
+  function updateFlavor(flavor, root) {
+    const flavorKey = flavor.toLowerCase().replace(/\s+/g, "-");
+
+    root.querySelectorAll(".nh-product-card").forEach((card) => {
+      if (card.classList.contains("nh-featured")) {
+        card.style.backgroundColor = flavorBackgrounds[flavorKey] || "white";
+      }
+
+      const radios = card.querySelectorAll(".nh-radio");
+      radios.forEach((radio) => {
+        radio.checked = radio.value === flavor;
+      });
+
+      const img = card.querySelector(".nh-product-image img");
+      const newSrc = img.getAttribute(`data-flavor-${flavorKey}`);
+      if (newSrc && img.src !== newSrc) {
+        img.style.opacity = 0;
+        setTimeout(() => {
+          img.src = newSrc;
+          img.onload = () => {
+            requestAnimationFrame(() => {
+              img.style.opacity = 1;
+            });
+          };
+        }, 30);
+      }
+    });
+  }
+
+  function synchronizeImageWithSelectedFlavor(root) {
+    root.querySelectorAll(".nh-product-card").forEach((card) => {
+      const selectedRadio = card.querySelector(".nh-radio:checked");
+      if (selectedRadio) {
+        const selectedFlavor = selectedRadio.value;
+        updateFlavor(selectedFlavor, root);
+      }
+    });
+  }
+
+  // Allow user-initiated flavor changes afterward
+  root.querySelectorAll(".nh-radio").forEach((radio) => {
+    radio.addEventListener("change", (e) => {
+      if (e.isTrusted && e.target.checked) {
+        updateFlavor(e.target.value, root);
+      }
+    });
+  });
+});
+
+// ✅ Preload images
+if (!window.nhPreloaded) {
+  const preload = [
+    "https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_MB_SP_1.png?v=1745509967",
+    "https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_T_SP_1.png?v=1745509967",
+    "https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_PM_SP_1.png?v=1745509967",
+    "https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_MB_6_SP.png?v=1745509693",
+    "https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_T_6_SP.png?v=1745509693",
+    "https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_PM_6_SP.png?v=1745509693",
+    "https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_MB_3_SP.png?v=1745509693",
+    "https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_T_3_SP.png?v=1745509693",
+    "https://cdn.shopify.com/s/files/1/0014/0158/5725/files/NH_PM_3_SP.png?v=1745509693",
+  ];
+  preload.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+  window.nhPreloaded = true;
+}
+</script>
+
+</div>
